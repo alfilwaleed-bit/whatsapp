@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS \`user\` (
   \`fcm_data\` text DEFAULT NULL,
   \`fcm_inbox\` tinyint DEFAULT 1,
   \`status\` varchar(50) DEFAULT 'OFFLINE',
+  \`role\` varchar(50) DEFAULT 'user',
   \`meta_data\` text DEFAULT NULL,
   \`createdAt\` timestamp DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (\`id\`), UNIQUE KEY \`uid\` (\`uid\`), UNIQUE KEY \`email\` (\`email\`)
@@ -148,6 +149,7 @@ CREATE TABLE IF NOT EXISTS \`beta_conversation\` (
   \`uid\` varchar(255) DEFAULT NULL,
   \`chat_id\` varchar(255) DEFAULT NULL,
   \`msgContext\` text DEFAULT NULL,
+  \`route\` varchar(50) DEFAULT NULL,
   \`source\` varchar(50) DEFAULT NULL,
   \`instance_id\` varchar(255) DEFAULT NULL,
   \`createdAt\` timestamp DEFAULT CURRENT_TIMESTAMP,
